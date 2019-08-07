@@ -1,0 +1,44 @@
+<h1>Eat-Da-Burger!</h1>
+
+<section class="main">
+                
+    <aside>
+            <div id="content">
+                <ul>
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    <li>{{burger_name}}
+                        <button class="devour" data-id="{{this.id}}">Devour</button>
+                    </li>
+                    {{/unless}}  
+                    {{/each}}
+                </ul>                  
+            </div>
+    </aside>
+
+    <aside>
+        <div id="content">
+            <img src="/assets/image/Burger-img.jpg">                    
+        </div>
+    </aside>
+
+        <aside>
+            <div id="content">
+                <ul>
+                    {{#each burger}}
+                    {{#if devoured}}
+                    <li>{{burger_name}}
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>       
+            </div>
+        </aside>
+
+</section>
+<section class="submit">
+       <input id="burgerInput" type="text" />
+        <button id="submit">Submit</button>
+        <p>Enter the burger you like to eat and submit it</p>         
+</section>
+            
